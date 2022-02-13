@@ -44,4 +44,18 @@ export class ProfileService {
     })
     return promise
   }
+
+
+
+
+  getUserRepo(searchRepo: string | number){
+    interface apiResults {
+    
+      repos: number
+      login:string,
+      html_url:string,
+      description:string,
+      language:string
+    }
+  }
 }
