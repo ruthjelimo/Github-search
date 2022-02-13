@@ -4,15 +4,15 @@ import { Output, EventEmitter} from'@angular/core'
 
 @Component({
   selector: 'app-form',
-  templateUrl: './form.component.html',
+  templateUrl: './formComponent.html',
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
   searchItem?: string
-  @Output() searchProf = new EventEmitter<any>();
+  @Output() searchProfile = new EventEmitter<any>();
 
   searchUser() {
-    this.searchProf.emit(this.searchItem)
+    this.searchProfile.emit(this.searchItem)
   }
 
   constructor() { }

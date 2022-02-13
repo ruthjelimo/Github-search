@@ -1,10 +1,12 @@
 <div class="card">
     <div class="card-body">
         <form #name="ngForm" class="">
-      This is some text within a card body.
-      <input type="password" class="form-control" placeholder="username" [(ngmodel)]="searchItem" name="searchItem">
-        
+            <div class="form-group ">
+      <input type="password" class="form-control" placeholder="username" [(ngmodel)]="searchItem">
+            </div>
+            <div>
       <input type="submit" class="btn btn-warning" id="input" value="Submit" (click)="searchUser()">
-    </div>
-       </form>
-  </div>
+            </div>
+       
+        </form>
+  
