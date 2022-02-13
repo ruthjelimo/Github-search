@@ -1,4 +1,19 @@
-<div>
-    <h2>Github Search</h2>
+<div class="container">
+     <div class="card" style="width: 18rem;">
+        <img src="{{profile.avatar_url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{profile.login}}</h5>
+          <div class="card-body">
+            <p>
+            followers: {{profile.followers}}<br>
+            following: {{profile.following}}
+            </p>
+           </div>
+          <p class="card-text">
+          <a href="{{profile.html_url}}" class="btn btn-primary">VIEW GITHUB</a>
+        </div>
+      </div>
+      <div class="">
+        
+      </div>
 </div>
-<!-- <li *ngFor repo of repos></li> -->

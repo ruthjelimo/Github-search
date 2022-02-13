@@ -28,7 +28,7 @@ this.profileRequest.displayRepos(searchItem).then((success)=>{
 })
   }
   ngOnInit(): void {
-    this.search('Hezron-tech')
+    this.search('ruthjelimo')
   }
 }
 

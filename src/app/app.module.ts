@@ -5,20 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { profileComponent } from './profile/profile.component'
 import { ProfileService } from './profile-service.service';
-// import { FormComponent } from './form.component';
-import { FormComponent } from './form/form.component';
-import { NavComponent } from './nav/nav.component';
+
+
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     profileComponent,
-    FormComponent,
-    NavComponent
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
+ 
   ],
   providers: [ProfileService],
   bootstrap: [AppComponent]

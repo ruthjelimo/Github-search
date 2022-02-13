@@ -15,6 +15,8 @@ export class ProfileService {
   }
   getUserProfile(searchItem: string | number) {
     interface apiResults {
+      html_url: any;
+      name: any;
       login: string,
       avatar_url: string,
       bio: string,
@@ -30,11 +32,13 @@ export class ProfileService {
     let promise = new Promise((resolve, reject) => {
       this.http.get<apiResults>(completeUrl, options).toPromise().then(response => {
         this.profile.login = response!.login
+        this.profile.name = response!.name
         this.profile.avatar_url = response!.avatar_url
         this.profile.bio = response!.bio
         this.profile.followers = response!.followers
         this.profile.following = response!.following
         this.profile.public_repos = response!.public_repos
+        this.profile.html_url =response!.html_url
         console.log(this.profile)
         resolve(null)
       },
