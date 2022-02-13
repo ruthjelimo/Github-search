@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { profileComponent } from './profile/profile.component'
 import { ProfileService } from './profile-service.service';
+import { FormComponent } from './form/form.component';
 @NgModule({
   declarations: [
     AppComponent,
-    profileComponent
+    profileComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
