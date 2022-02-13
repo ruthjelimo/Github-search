@@ -4,7 +4,8 @@ export class Repo {
         public login:string,
         public html_url:string,
         public description:string,
-        public language:string
+        public title:string,
+        public language:string,
     ){
     }
 }

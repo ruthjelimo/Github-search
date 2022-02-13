@@ -13,7 +13,7 @@ export class profileComponent implements OnInit {
   profile!: Profile;
   repo!: any;
   constructor( private profileRequest:ProfileService) {
-    this.repo= new Repo("","","","")
+    this.repo= new Repo("","","","","")
     this.profile=new Profile("","","",0,0,0)
   }
   search(searchItem:any) {

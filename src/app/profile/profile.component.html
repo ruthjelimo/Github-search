@@ -13,7 +13,30 @@
           <a href="{{profile.html_url}}" class="btn btn-primary">VIEW GITHUB</a>
         </div>
       </div>
-      <div class="">
+
+ 
+       <!-- <div class="card text-center">
+        <div class="card-header">
+      
+        </div> -->
+        <!-- <div class="card-body"*ngFor ="let rep of repo let i=index">
+          
+          <h5 class="card-title">{{rep.description}}</h5>
+          <p class="card-text">{{rep.language}}</p>
+           <a href="{{repo.html_url}}" class="btn btn-primary">VIEW REPO</a> -->
+         <!-- </div> -->
         
+      </div> 
+      <div class="card border-dark mb-3" style="max-width: 18rem;">
+        <div class="card-header">Repositories</div>
+        <div class="card-body text-dark" *ngFor ="let rep of repo let i=index">
+          <h5 class="card-title"> {{rep.title}}</h5>
+          <h5 class="card-title"> {{rep.description}}</h5>
+          <p class="card-text">{{rep.language}}</p>
+        </div>
       </div>
-</div>
+
+
+
+
+

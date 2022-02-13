@@ -11,7 +11,7 @@ export class ProfileService {
   repo!: any;
   constructor(private http: HttpClient) {
     this.profile = new Profile("", "", "", 0, 0, 0);
-    this.repo = new Repo("", "", "", "");
+    this.repo = new Repo("","", "", "", "");
   }
   getUserProfile(searchItem: string | number) {
     interface apiResults {
@@ -59,6 +59,7 @@ export class ProfileService {
     let promise = new Promise((resolve, reject) => {
       this.http.get<apiResponse>(url).toPromise().then(response => {
       this.repo=response!
+     
       console.log(this.repo)
         resolve(null)
       }, error => {
