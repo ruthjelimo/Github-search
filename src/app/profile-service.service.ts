@@ -8,10 +8,10 @@ import { environment } from 'src/environments/environment';
 })
 export class ProfileService {
   profile!: Profile;
-  repo!: Repo;
+  repo!: any;
   constructor(private http: HttpClient) {
     this.profile = new Profile("", "", "", 0, 0, 0);
-    this.repo = new Repo("", "", "", "")
+    this.repo = new Repo("", "", "", "");
   }
   getUserProfile(searchItem: string | number) {
     interface apiResults {
@@ -26,7 +26,7 @@ export class ProfileService {
       authorization: 'token' + environment.apiKey,
     })
     let options = { headers: headers }
-    let completeUrl = environment.apiUrl + searchItem + '?api_Key' + environment.apiKey;
+    let completeUrl = environment.apiUrl + searchItem;
     let promise = new Promise((resolve, reject) => {
       this.http.get<apiResults>(completeUrl, options).toPromise().then(response => {
         this.profile.login = response!.login
@@ -44,37 +44,28 @@ export class ProfileService {
     })
     return promise
   }
-
-
-
-
-  getUserRepo(searchRepo: string | number){
-    interface apiResults {
-    
-      repos: number
-      login:string,
-      html_url:string,
-      description:string,
-      language:string
+  displayRepos(user: any) {
+    interface apiResponse {
+      login: string,
+      html_url: string,
+      description: string,
+      language: string
     }
-    let headers = new HttpHeaders({
-      authorization: 'token' + environment.apiKey,
-    })
-    let options = { headers: headers }
-    let completeUrl = environment.apiUrl + searchRepo + '?api_Key' + environment.apiKey;
+    let url = environment.apiUrl + user + '/repos';
     let promise = new Promise((resolve, reject) => {
-      this.http.get<apiResults>(completeUrl, options).toPromise().then(response => {
-        this.repo.login = response!.login
-        this.repo.html_url = response!.html_url
-         this.repo.description = response!.description
-        this.repo.language = response!.language
+      this.http.get<apiResponse>(url).toPromise().then(response => {
+      this.repo=response!
+        // this.repo.login=response!.login
+        // this.repo.html_url = response!.html_url
+        // this.repo.description = response!.description
+        // this.repo.language = response!.language
         console.log(this.repo)
         resolve(null)
-      },
-        error => {
-          reject(error)
-        })
-    })
+      }, error => {
+        reject();
+        console.log(error)
+      })
+    });
     return promise
   }
 }
