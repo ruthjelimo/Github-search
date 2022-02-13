@@ -66,7 +66,7 @@ export class ProfileService {
       this.http.get<apiResults>(completeUrl, options).toPromise().then(response => {
         this.repo.login = response!.login
         this.repo.html_url = response!.html_url
-        this.repo.description = response!.description
+         this.repo.description = response!.description
         this.repo.language = response!.language
         console.log(this.repo)
         resolve(null)
