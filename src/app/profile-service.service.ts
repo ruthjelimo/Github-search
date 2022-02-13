@@ -55,11 +55,7 @@ export class ProfileService {
     let promise = new Promise((resolve, reject) => {
       this.http.get<apiResponse>(url).toPromise().then(response => {
       this.repo=response!
-        // this.repo.login=response!.login
-        // this.repo.html_url = response!.html_url
-        // this.repo.description = response!.description
-        // this.repo.language = response!.language
-        console.log(this.repo)
+      console.log(this.repo)
         resolve(null)
       }, error => {
         reject();
