@@ -2,16 +2,19 @@
   <h2>Github-Search App</h2>
 </div>
 
-
+<!-- 
 
 <div class="container">
-     <div class="card" style="width: 18rem;">
+<div class="row">
+  <div class="col-sm-6">
+     <div class="card">
+      <div class="card-body">
         <img src="{{profile.avatar_url}}" class="card-img-top" alt="...">
-        <div class="card-body">
+       
           <h5 class="card-title">{{profile.login}}</h5>
           <div class="card-body">
             <p>
-            <!-- bio:{{profile.bio}}<br> -->
+            
             followers: {{profile.followers}}<br>
             following: {{profile.following}}
             </p>
@@ -20,30 +23,59 @@
           <a href="{{profile.html_url}}" class="btn btn-primary">VIEW GITHUB</a>
         </div>
       </div>
-
- 
-       <!-- <div class="card text-center">
-        <div class="card-header">
-      
-        </div> -->
-        <!-- <div class="card-body"*ngFor ="let rep of repo let i=index">
-          
-          <h5 class="card-title">{{rep.description}}</h5>
-          <p class="card-text">{{rep.language}}</p>
-           <a href="{{repo.html_url}}" class="btn btn-primary">VIEW REPO</a> -->
-         <!-- </div> -->
-        
-      </div> 
-      <div class="card border-dark mb-3" style="max-width: 18rem;">
-        <div class="card-header">Repositories</div>
-        <div class="card-body text-dark" *ngFor ="let rep of repo let i=index">
-          <h5 class="card-title"> {{rep.title}}</h5>
-          <h5 class="card-title"> {{rep.description}}</h5>
-          <p class="card-text">{{rep.language}}</p>
-        </div>
       </div>
 
+        <h2>Repositories</h2>
+          <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <div class="card-body text-dark" *ngFor ="let rep of repo let i=index">
+              <h5 class="card-title">{{rep.title}}</h5>
+              <p class="card-text">{{rep.description}}<br>
+                                 language:  {{rep.language}}
 
+              </p>
 
+              <a href="{{repo.html_url}}"class="btn btn-primary">VIEW REPO</a> 
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+      </div> -->
+
+          
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <div *ngIf="profile" class="prof">
+              <div class="card" style="width: 18rem;">
+                <img src="{{profile.avatar_url}}" class="rounded-circle" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{profile.login}}</h5>
+                  <p class="card-text">{{profile.bio}}</p>
+                </div>
+              </div>
+              <div class="view">
+                <p> <a href="{{profile.html_url}}" class="btn btn-success">view profile on github</a></p>
+              </div>
+              <div class="follows">
+                <p class="lower">{{profile.followers}} <span>Followers</span></p>
+                <p>{{profile.following}} <span>Following</span></p>
+              </div>
+              <div class="repos">
+                <p> Repositories:{{profile.public_repos}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div *ngFor="let rep of repo" class="card">
+              <div class="card-body">
+                <h5 class="card-title">{{rep.description}}</h5>
+                <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                <a href="{{rep.html_url}}" class="btn btn-primary">View git repo</a>
+              </div>
+            </div>
+          </div>
 
 
