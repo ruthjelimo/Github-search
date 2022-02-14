@@ -8,7 +8,8 @@ export class Profile {
         public bio:string,
         public followers:number,
         public following:number,
-        public public_repos:number
+        public public_repos:number,
+        public created_at:any
         // public html_url:string
     ){
     }

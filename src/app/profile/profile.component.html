@@ -60,19 +60,30 @@
                 <p> <a href="{{profile.html_url}}" class="btn btn-success">view profile on github</a></p>
               </div>
               <div class="follows">
-                <p class="lower">{{profile.followers}} <span>Followers</span></p>
-                <p>{{profile.following}} <span>Following</span></p>
+                <p class="lower"><span>Followers:</span>{{profile.followers}} </p>
+                <p> <span>Following:</span>{{profile.following}}<br>
+               
+                </p>
               </div>
               <div class="repos">
-                <p> Repositories:{{profile.public_repos}}</p>
+                <p><span>Repositories:</span> {{profile.public_repos}}</p>
               </div>
             </div>
           </div>
           <div class="col-sm-6">
             <div *ngFor="let rep of repo" class="card">
               <div class="card-body">
+                <div class="follows">
+                  <p class="lower"><span>{{rep.name}} </span>
+                  </p>
+    
+                </div>
                 <h5 class="card-title">{{rep.description}}</h5>
-                <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                <div class="follows">
+                  <p class="lower"><span>{{rep.language}}</span> 
+                  </p>
+    
+                </div>
                 <a href="{{rep.html_url}}" class="btn btn-primary">View git repo</a>
               </div>
             </div>

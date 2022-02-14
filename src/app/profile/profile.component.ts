@@ -14,7 +14,7 @@ export class profileComponent implements OnInit {
   repo!: any;
   constructor( private profileRequest:ProfileService) {
     this.repo= new Repo("","","","","")
-    this.profile=new Profile("","","",0,0,0)
+    this.profile=new Profile("","","",0,0,0,0)
   }
   search(searchItem:any) {
     this.profileRequest.getUserProfile(searchItem).then((success)=>{

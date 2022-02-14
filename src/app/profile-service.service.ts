@@ -10,7 +10,7 @@ export class ProfileService {
   profile!: Profile;
   repo!: any;
   constructor(private http: HttpClient) {
-    this.profile = new Profile("", "", "", 0, 0, 0);
+    this.profile = new Profile("", "", "", 0,0, 0, 0);
     this.repo = new Repo("","", "", "", "");
   }
   getUserProfile(searchItem: string | number) {
