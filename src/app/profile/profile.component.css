@@ -1,8 +1,9 @@
 .nav{
-    background-color: black;
+  
     color: blue;
     padding: 10px;
     align-items:  center;
+    margin-left: 40%;
     
 }
 span{

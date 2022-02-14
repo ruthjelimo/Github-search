@@ -1,51 +1,8 @@
-<div class="nav">
+  <!-- <div class="nav">
   <h2>Github-Search App</h2>
-</div>
-
-<!-- 
-
-<div class="container">
-<div class="row">
-  <div class="col-sm-6">
-     <div class="card">
-      <div class="card-body">
-        <img src="{{profile.avatar_url}}" class="card-img-top" alt="...">
-       
-          <h5 class="card-title">{{profile.login}}</h5>
-          <div class="card-body">
-            <p>
-            
-            followers: {{profile.followers}}<br>
-            following: {{profile.following}}
-            </p>
-           </div>
-          <p class="card-text">
-          <a href="{{profile.html_url}}" class="btn btn-primary">VIEW GITHUB</a>
-        </div>
-      </div>
-      </div>
-
-        <h2>Repositories</h2>
-          <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <div class="card-body text-dark" *ngFor ="let rep of repo let i=index">
-              <h5 class="card-title">{{rep.title}}</h5>
-              <p class="card-text">{{rep.description}}<br>
-                                 language:  {{rep.language}}
-
-              </p>
-
-              <a href="{{repo.html_url}}"class="btn btn-primary">VIEW REPO</a> 
-            </div>
-          </div>
-        </div>
-        </div>
-        </div>
-      </div> -->
-
-          
+</div>     
       <div class="container">
+        <app-form (searchProf)="search($event)"></app-form>
         <div class="row">
           <div class="col-sm-6">
             <div *ngIf="profile" class="prof">
@@ -68,7 +25,9 @@
               <div class="repos">
                 <p><span>Repositories:</span> {{profile.public_repos}}</p>
               </div>
-            </div>
+               -->
+      <!-- <p><span>created:</span>{{profile.created_at|dateCount}} days ago</p> -->
+            <!-- </div>
           </div>
           <div class="col-sm-6">
             <div *ngFor="let rep of repo" class="card">
@@ -87,6 +46,60 @@
                 <a href="{{rep.html_url}}" class="btn btn-primary">View git repo</a>
               </div>
             </div>
-          </div>
+          </div> 
+
+<div class="container my-5">
+
+   <footer class="text-center text-white" style="background-color: #f1f1f1;">
+
+  <div class="container-fluid">
+  <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright, By Ruth
+    <a class="text-dark" href="https://mdbootstrap.com/"></a>
+  </div>
+</div>
+</footer> 
 
 
+<!-- <!-- <!-- -->
+ 
+<div class="container">
+  <app-form (searchProf)="search($event)"></app-form>
+<div class="row">
+  <div class="col-sm-6">
+    <div *ngIf="profile" class="prof">
+      <div class="card" style="width: 18rem;">
+        <img src="{{profile.avatar_url}}" class="rounded-circle" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{profile.login}}</h5>
+          <p class="card-text">{{profile.bio}}</p>
+        </div>
+      </div>
+      <div class="view">
+        <p> <a href="{{profile.html_url}}" class="btn btn-success">view profile on github</a></p>
+      </div>
+      <div class="follows">
+        <p class="lower"><span>Followers:</span>{{profile.followers}} </p>
+        <p> <span>Following:</span>{{profile.following}}</p>
+      </div>
+      <div class="repos">
+        <p><span> Repositories:</span>{{profile.public_repos}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div *ngFor="let rep of repo" class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{rep.name}}</h5>
+        <p class="card-text">{{rep.description}}</p>
+        <a href="{{rep.html_url}}" class="btn btn-success">View git repo</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div> 
+
+
+
+
+ 
