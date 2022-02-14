@@ -90,8 +90,10 @@
   <div class="col-sm-6">
     <div *ngFor="let rep of repo" class="card">
       <div class="card-body">
-        <h5 class="card-title">{{rep.name}}</h5>
+        <h5 class="card-title"><span>{{rep.name}}</span>
+               </h5>
         <p class="card-text">{{rep.description}}</p>
+        <span>{{rep.language}}</span><br>
         <a href="{{rep.html_url}}" class="btn btn-success">View git repo</a>
       </div>
     </div>
