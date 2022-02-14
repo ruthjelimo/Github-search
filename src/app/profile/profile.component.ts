@@ -2,7 +2,7 @@ import { ProfileService } from '../profile-service.service';
 import { Repo } from './../repo';
 import { Component, OnInit } from '@angular/core';
 import { Profile } from '../profile';
-// import { Profile } from 'clas/profile';
+
 
 @Component({
   selector: 'app-profile',
