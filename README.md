@@ -1,6 +1,12 @@
-# Github
+## Application
+Github-Search App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
+## Author
+Ruth jelimo
+
+## Description
+The project is all about Github-Search where one can search a username and can also see the repos one have
+
 
 ## Development server
 
@@ -25,3 +31,20 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Todo List
+1.Design
+2.Execute for view
+
+## Technologies used
+ANGULAR
+
+## Livelink
+To clone the project use the link below
+https://github.com/ruthjelimo/Github-search.git
+
+To view the project use the link below
+
+
+## License
+The project is under the link of MIT
