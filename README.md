@@ -44,7 +44,7 @@ To clone the project use the link below
 https://github.com/ruthjelimo/Github-search.git
 
 To view the project use the link below
-
+https://ruthjelimo.github.io/Github-search/
 
 ## License
 The project is under the link of MIT
